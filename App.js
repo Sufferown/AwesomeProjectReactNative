@@ -4,11 +4,16 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 const App = () => {
   return (
     <View style={styles.container}>
-      <Image source={require('./Content/img/Silvestre.png')} />
-      <Text style={styles.title}>Prueba APP React Native</Text>
+      <Image
+        source={require('./Content/img/Silvestre.png')}
+        style={styles.image}
+      />
+      <Text style={styles.title}>Gatitos Encantadores</Text>
+      <Text style={styles.subtitle}>Explora el mundo felino</Text>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>¡Gato!</Text>
+        <Text style={styles.buttonText}>Ver Gatitos</Text>
       </TouchableOpacity>
+      <Text style={styles.greeting}>¡Hola, amante de los gatos!</Text>
     </View>
   );
 };
@@ -18,28 +23,41 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#f9f9f9',
   },
   image: {
-    width: 150,
-    height: 150,
-    borderRadius: 75,
+    width: 180,
+    height: 180,
+    borderRadius: 90,
     marginBottom: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: '#333',
+  },
+  subtitle: {
+    fontSize: 18,
+    marginBottom: 20,
+    color: '#666',
   },
   button: {
-    backgroundColor: '#3498db',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
+    backgroundColor: '#ff7f50',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 25,
+    elevation: 3,
   },
   buttonText: {
     color: 'white',
     fontSize: 16,
+    fontWeight: 'bold',
+  },
+  greeting: {
+    marginTop: 20,
+    fontSize: 20,
+    color: '#444',
   },
 });
 
